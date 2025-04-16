@@ -84,6 +84,12 @@ if (!function_exists('envo_royal_setup')) :
          * specifically font, colors, icons, and column width.
          */
         add_editor_style(array('assets/css/bootstrap.css', envo_royal_fonts_url(), 'assets/css/editor-style.css'));
+		
+		/**
+		* Customizer options
+		*/
+	   require_once( trailingslashit(get_template_directory()) . 'extra/customizer.php' );
+	   require_once( trailingslashit(get_template_directory()) . 'extra/customizer-recommend.php' );
 
     }
 
@@ -262,11 +268,6 @@ if ( is_admin() ) {
 	require_once( trailingslashit( get_template_directory() ) . 'extra/envo-royal-plugin-install.php' );
 }
 
-/**
- * Customizer options
- */
-require_once( trailingslashit(get_template_directory()) . 'extra/customizer.php' );
-require_once( trailingslashit(get_template_directory()) . 'extra/customizer-recommend.php' );
 
 require_once( trailingslashit(get_template_directory()) . 'extra/extra.php' );
 
