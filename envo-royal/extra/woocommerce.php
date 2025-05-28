@@ -119,14 +119,16 @@ if ( !function_exists( 'envo_royal_head_wishlist' ) ) {
 if ( !function_exists( 'envo_royal_head_compare' ) ) {
 
 	function envo_royal_head_compare() {
-		if ( function_exists( 'yith_woocompare_constructor' ) ) {
+		if (class_exists( 'YITH_WooCompare_Frontend' )) {
 
 			$contents = get_theme_mod( 'header_icons_layout', array( 'my_account', 'head_wishlist', 'head_compare', 'head_search', 'header_cart' ) );
 			if ( in_array( 'head_compare', $contents ) ) {
 				global $yith_woocompare;
+				wp_enqueue_script( 'yith-woocompare-main' );
+				$url =  method_exists('YITH_WooCompare_Frontend', 'view_table_url') ? $yith_woocompare->obj->view_table_url() :  YITH_WooCompare_Frontend::instance()->get_table_url();
 				?>
 				<div class="header-compare product">
-					<a class="compare added" rel="nofollow" href="<?php echo esc_url( $yith_woocompare->obj->view_table_url() ); ?>" data-tooltip="<?php esc_attr_e( 'Compare', 'envo-royal' ); ?>" title="<?php esc_attr_e( 'Compare', 'envo-royal' ); ?>">
+					<a class="compare added yith-woocompare-open" rel="nofollow" href="<?php echo esc_url( $url ) ?>" data-tooltip="<?php esc_attr_e( 'Compare', 'envo-royal' ); ?>" title="<?php esc_attr_e( 'Compare', 'envo-royal' ); ?>">
 						<i class="la la-sync"></i>
 					</a>
 				</div>
