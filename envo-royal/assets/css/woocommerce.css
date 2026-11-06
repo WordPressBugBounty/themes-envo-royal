@@ -481,3 +481,8 @@ ul.site-header-cart {
 .archive-product-categories a.woocommerce-LoopProduct-link { 
     display: none; 
 }
+
+/* Mini-Cart block: its drawer sets the text size in rem (1rem = 10px in this theme). */
+.wc-block-mini-cart__drawer {
+    font-size: 15px;
+}

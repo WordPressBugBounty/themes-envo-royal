@@ -2,9 +2,9 @@
 Contributors: envothemes
 Tags: one-column, two-columns, full-width-template, right-sidebar, custom-background, custom-menu, custom-header, editor-style, featured-images, translation-ready, custom-logo, threaded-comments, footer-widgets, rtl-language-support, blog, e-commerce
 Requires at least: 4.4
-Tested up to: 6.9
+Tested up to: 7.1
 Requires PHP: 5.6
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -73,6 +73,12 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 Envo Royal is distributed under the terms of the GNU GPL (http://www.gnu.org/licenses/gpl-3.0.txt), version 3 or later.
 
 == Changelog ==
+
+= Version 1.0.15 =
+* Added theme.json for better block editor support (content and wide width, block spacing, shadows)
+* Fixed wide and full width blocks next to the sidebar (they stay in the content column)
+* Fixed the text size in the Mini-Cart block drawer
+* Tested with WP 7.1
 
 = Version 1.0.14 =
 * Tested with WP 6.9
